@@ -1,0 +1,19 @@
+apply plugin: 'java'
+
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile(
+        [group: 'com.google.inject',            name: 'guice',          version: '3.0'],
+        [group: 'com.google.inject.extensions', name: 'guice-servlet',  version: '3.0'],
+
+        [group: 'org.jboss.resteasy',           name: 'resteasy-jaxrs', version: '3.0.5.Final'],
+        [group: 'org.jboss.resteasy',           name: 'resteasy-guice', version: '3.0.5.Final'],
+
+        [group: 'org.eclipse.jetty',            name: 'jetty-servlet',  version: '9.1.0.RC0']
+    )
+}
